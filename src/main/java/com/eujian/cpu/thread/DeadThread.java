@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 
 import javax.annotation.PostConstruct;
 @Slf4j
-@Configuration
+//@Configuration
 public class DeadThread {
 
 
