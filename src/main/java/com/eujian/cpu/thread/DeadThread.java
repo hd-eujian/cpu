@@ -12,14 +12,17 @@ public class DeadThread {
 
     @PostConstruct
     public void DeadFun(){
-        Thread thread = new Thread(() -> {
-            while (true) {
-                new DeadThread();
-                log.info("创建DeadThread,");
-            }
-        });
+        for (int i =0;i<20;i++){
+            Thread thread = new Thread(() -> {
+                while (true) {
+                    new DeadThread();
+                    log.info("创建DeadThread,");
+                }
+            });
 
-        thread.setName("dealThread");
-        thread.start();
+            thread.setName("dealThread");
+            thread.start();
+        }
+
     }
 }
