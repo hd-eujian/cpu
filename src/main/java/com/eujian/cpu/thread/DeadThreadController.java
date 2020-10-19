@@ -20,4 +20,16 @@ public class DeadThreadController {
         }
 
     }
+
+    @GetMapping("dead2")
+    public void DeadFun2(){
+        new Thread(()->{
+            while (true){
+                int i=0;
+                i++;
+            }
+        }).start();
+
+
+    }
 }
